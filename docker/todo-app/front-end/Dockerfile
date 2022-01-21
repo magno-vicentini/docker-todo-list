@@ -1,7 +1,6 @@
 FROM node:14-alpine AS todofrontend
-#COPY package*.json ./
-COPY . .
+WORKDIR /
 ADD node_modules.tar.gz ./
+COPY . .
 EXPOSE 3000
-#RUN npm install
 CMD ["npm", "start"]

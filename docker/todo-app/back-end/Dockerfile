@@ -1,7 +1,7 @@
 FROM node:14-alpine AS todobackend
-#COPY package*.json ./
-COPY . .
+WORKDIR /
 ADD node_modules.tar.gz ./
+COPY . .
 EXPOSE 3001
-#RUN npm install
+
 CMD ["npm", "start"]
